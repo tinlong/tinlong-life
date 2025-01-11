@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Playground", "Playground\Playground.csproj", "{6A676B79-E7BC-411D-BCD1-A4E9BC00CBBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinlongLife.Domain", "TinlongLife.Domain\TinlongLife.Domain.csproj", "{9C9419E1-7623-4E97-969C-88BCF01ABEDF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinlongLife.Data", "TinlongLife.Data\TinlongLife.Data.csproj", "{A8A68090-A8A5-4B19-90E8-4A805341E8D5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6A676B79-E7BC-411D-BCD1-A4E9BC00CBBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A676B79-E7BC-411D-BCD1-A4E9BC00CBBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A676B79-E7BC-411D-BCD1-A4E9BC00CBBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A676B79-E7BC-411D-BCD1-A4E9BC00CBBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C9419E1-7623-4E97-969C-88BCF01ABEDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C9419E1-7623-4E97-969C-88BCF01ABEDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C9419E1-7623-4E97-969C-88BCF01ABEDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C9419E1-7623-4E97-969C-88BCF01ABEDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8A68090-A8A5-4B19-90E8-4A805341E8D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8A68090-A8A5-4B19-90E8-4A805341E8D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8A68090-A8A5-4B19-90E8-4A805341E8D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8A68090-A8A5-4B19-90E8-4A805341E8D5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
