@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinlongLife.Domain", "Tinlo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinlongLife.Data", "TinlongLife.Data\TinlongLife.Data.csproj", "{A8A68090-A8A5-4B19-90E8-4A805341E8D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinlongLife.AppHost", "TinlongLife.AppHost\TinlongLife.AppHost.csproj", "{1A501235-61ED-4FBA-98CA-0940374F778D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TinlongLife.ServiceDefaults", "TinlongLife.ServiceDefaults\TinlongLife.ServiceDefaults.csproj", "{F837147F-306B-4E1E-AEF0-F5B0E17B476A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,13 @@ Global
 		{A8A68090-A8A5-4B19-90E8-4A805341E8D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8A68090-A8A5-4B19-90E8-4A805341E8D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8A68090-A8A5-4B19-90E8-4A805341E8D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1A501235-61ED-4FBA-98CA-0940374F778D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1A501235-61ED-4FBA-98CA-0940374F778D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1A501235-61ED-4FBA-98CA-0940374F778D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1A501235-61ED-4FBA-98CA-0940374F778D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F837147F-306B-4E1E-AEF0-F5B0E17B476A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F837147F-306B-4E1E-AEF0-F5B0E17B476A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F837147F-306B-4E1E-AEF0-F5B0E17B476A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F837147F-306B-4E1E-AEF0-F5B0E17B476A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
