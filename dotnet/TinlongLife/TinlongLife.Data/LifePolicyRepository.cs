@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using TinlongLife.Domain.Interfaces;
 using TinlongLife.Domain.Models;
 
@@ -12,9 +13,9 @@ public class LifePolicyRepository : IRepository<LifePolicy>
         _context = context;
     }
     
-    public LifePolicy GetById(Guid id)
+    public async Task<LifePolicy> GetById(Guid id)
     {
-        return _context.LifePolicies.Find(id);
+        return await _context.LifePolicies.FindAsync(id);
     }
 
     public IEnumerable<LifePolicy> GetAll()
@@ -22,22 +23,22 @@ public class LifePolicyRepository : IRepository<LifePolicy>
         return _context.LifePolicies;
     }
 
-    public Guid? Add(LifePolicy entity)
+    public async Task<Guid?> Add(LifePolicy entity)
     {
-        _context.LifePolicies.Add(entity);
-        _context.SaveChanges();
+        await _context.LifePolicies.AddAsync(entity);
+        await _context.SaveChangesAsync();
         return entity.Id;
     }
 
-    public void Update(LifePolicy entity)
+    public async Task Update(LifePolicy entity)
     {
         _context.LifePolicies.Update(entity);
-        _context.SaveChanges();
+        await _context.SaveChangesAsync();
     }
 
-    public void Delete(LifePolicy entity)
+    public async Task Delete(LifePolicy entity)
     {
         _context.LifePolicies.Remove(entity);
-        _context.SaveChanges();
+        await _context.SaveChangesAsync();
     }
 }

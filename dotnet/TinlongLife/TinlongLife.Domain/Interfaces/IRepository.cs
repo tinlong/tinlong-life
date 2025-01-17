@@ -2,9 +2,9 @@ namespace TinlongLife.Domain.Interfaces;
 
 public interface IRepository<T> where T : class
 {
-    T GetById(Guid id);
+    Task<T> GetById(Guid id);
     IEnumerable<T> GetAll();
-    Guid? Add(T entity);
-    void Update(T entity);
-    void Delete(T entity);
+    Task<Guid?> Add(T entity);
+    Task Update(T entity);
+    Task Delete(T entity);
 }

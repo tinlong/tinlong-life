@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-    <Sdk Name="Aspire.AppHost.Sdk" Version="9.0.0"/>
+    <Sdk Name="Aspire.AppHost.Sdk" Version="9.0.0" />
 
     <PropertyGroup>
         <OutputType>Exe</OutputType>
@@ -12,7 +12,15 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Aspire.Hosting.AppHost" Version="9.0.0"/>
+        <PackageReference Include="Aspire.Hosting.AppHost" Version="9.0.0" />
+        <PackageReference Include="Aspire.Hosting.SqlServer" Version="9.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\PlaygroundHost\PlaygroundHost.csproj" />
+      <ProjectReference Include="..\Playground\Playground.csproj" />
+      <ProjectReference Include="..\TinlongLife.Data.Migration\TinlongLife.Data.Migration.csproj" />
     </ItemGroup>
 
 </Project>

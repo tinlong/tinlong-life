@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-PlaygroundHost-bf48b84b-89c2-4432-8976-f9d2a14b9433</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Aspire.Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TinlongLife.Data\TinlongLife.Data.csproj" />
+    <ProjectReference Include="..\TinlongLife.Domain\TinlongLife.Domain.csproj" />
+    <ProjectReference Include="..\TinlongLife.ServiceDefaults\TinlongLife.ServiceDefaults.csproj" />
+  </ItemGroup>
+</Project>

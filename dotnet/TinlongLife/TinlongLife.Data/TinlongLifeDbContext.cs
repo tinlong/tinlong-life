@@ -1,5 +1,6 @@
 using System.Configuration;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using TinlongLife.Domain.Interfaces;
 using TinlongLife.Domain.Models;
 
@@ -27,7 +28,7 @@ public class TinlongLifeDbContext : DbContext
         var connectionString = Environment.GetEnvironmentVariable("MsSqlConnectionString");
         if (string.IsNullOrEmpty(connectionString))
         {
-            throw new ConfigurationErrorsException("Sql server connection string configuration required");
+            throw new Exception("Sql server connection string configuration required");
         }
         optionsBuilder.UseSqlServer(connectionString);
     }

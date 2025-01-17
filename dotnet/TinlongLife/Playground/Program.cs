@@ -11,21 +11,21 @@ namespace Playground;
 
 class Program
 {
-    static void Main(string[] args)
+    static async Task Main(string[] args)
     {
         HostApplicationBuilder builder = Host.CreateApplicationBuilder(args);
         var connString = builder.Configuration.GetConnectionString("TinlongLifeDatabase");
-        builder.Services.AddDbContext<TinlongLifeDbContext>(options => options.UseSqlServer(connString));
+        builder.Services.AddDbContextFactory<TinlongLifeDbContext>(options => options.UseSqlServer(connString));
         builder.Services.AddSingleton<IRepository<LifePolicy>, LifePolicyRepository>();
         builder.Services.AddSingleton<LifePolicyService>();
         
         var serviceProvider = builder.Services.BuildServiceProvider();
         
         var service = serviceProvider.GetRequiredService<LifePolicyService>();
+
+        var policyId = await service.AddNewPolicy(1000, "Active", DateTime.Now, BillingFrequencyOption.Monthly, 100);
         
-        var policyId = service.AddNewPolicy(1000, "Active", DateTime.Now, BillingFrequencyOption.Monthly, 100);
-        
-        var policy = service.GetById(policyId.Value);
+        var policy = await service.GetById(policyId.Value);
 
         var stuff = "stuff";
     }

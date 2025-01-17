@@ -5,9 +5,9 @@ namespace TinlongLife.Domain.Operations;
 
 public class LifePolicyService(IRepository<LifePolicy> Repository)
 {
-    public LifePolicy GetById(Guid id)
+    public async Task<LifePolicy> GetById(Guid id)
     {
-        return Repository.GetById(id);
+        return await Repository.GetById(id);
     }
 
     public IEnumerable<LifePolicy> GetAll()
@@ -15,7 +15,7 @@ public class LifePolicyService(IRepository<LifePolicy> Repository)
         return Repository.GetAll();
     }
 
-    public Guid? AddNewPolicy(
+    public async Task<Guid?> AddNewPolicy(
         decimal faceAmount,
         string contractState,
         DateTime billingStartDate,
@@ -23,10 +23,10 @@ public class LifePolicyService(IRepository<LifePolicy> Repository)
         decimal billingAmount)
     {
         string policyNumber = Policy.NewPolicyNumber();
-        return AddNewPolicyWithPolicyNumber(policyNumber, faceAmount, contractState, billingStartDate, frequency, billingAmount);
+        return await AddNewPolicyWithPolicyNumber(policyNumber, faceAmount, contractState, billingStartDate, frequency, billingAmount);
     }
 
-    public Guid? AddNewPolicyWithPolicyNumber(string policyNumber,
+    public async Task<Guid?> AddNewPolicyWithPolicyNumber(string policyNumber,
         decimal faceAmount,
         string contractState,
         DateTime billingStartDate,
@@ -62,7 +62,7 @@ public class LifePolicyService(IRepository<LifePolicy> Repository)
             Policy = policy
         };
         
-        Repository.Add(policy);
+        await Repository.Add(policy);
         return policy.Id;
     }
 }
